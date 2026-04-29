@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Design Tokens */
+@theme {
+  /* Brand */
+  --color-primary: #6366f1;         /* softer indigo */
+  --color-primary-strong: #4f46e5;  /* hover/active */
+
+  /* Backgrounds */
+  --color-surface: #0a0f1c;         /* deeper, cleaner */
+  --color-surface-light: #111827;   /* main cards */
+  --color-surface-elevated: #1a2336;/* hover / panels */
+
+  /* Borders */
+  --color-border: #1e293b;          /* subtle, not noisy */
+
+  /* Text */
+  --color-text-primary: #e2e8f0;    /* soft white */
+  --color-text-secondary: #94a3b8;  /* muted */
+
+  /* Status */
+  --color-success: #22c55e;
+  --color-warning: #f59e0b;
+  --color-danger: #ef4444;
+
+  /* Accent (health vibe) */
+  --color-accent: #22d3ee;          /* cyan, fresh */
+}

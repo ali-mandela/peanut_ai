@@ -1,74 +1,100 @@
-# React + TypeScript + Vite
+# RAGA Health Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern B2B healthcare dashboard built with React, TypeScript, and Vite.
+This application simulates a healthcare SaaS platform with authentication, analytics, and patient management.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+* 🔐 Firebase Authentication (Login system)
+* 📊 Analytics Dashboard (charts & insights)
+* 🧑‍⚕️ Patient Management (grid + list view)
+* 🔍 Search & Filters (status, department)
+* 🔔 Notifications (browser + in-app toast)
+* 📱 Responsive UI (mobile + desktop)
+* ⚡ Fast performance with Vite
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* React + TypeScript
+* Zustand (state management)
+* Tailwind CSS (UI)
+* Firebase Auth
+* Recharts (charts)
+* Vite (build tool)
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📁 Project Structure
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```
+src/
+  components/
+    ui/
+    layouts/
+  pages/
+    Dashboard/
+    Analytics/
+    Patients/
+    Login/
+  store/
+  services/
+  data/
+  types/
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## ⚙️ Setup Instructions
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clone the repository
+
 ```
-"# peanut_ai" 
+git clone <your-repo-url>
+cd raga-health
+```
+
+2. Install dependencies
+
+```
+npm install
+```
+
+3. Add environment variables
+
+Create a `.env` file:
+
+```
+VITE_FIREBASE_API_KEY=your_key
+VITE_FIREBASE_AUTH_DOMAIN=your_domain
+VITE_FIREBASE_PROJECT_ID=your_project_id
+```
+
+4. Run the project
+
+```
+npm run dev
+```
+
+---
+
+## 🌐 Live Demo
+
+(Add your Vercel link here)
+
+---
+
+## 📌 Notes
+
+* Notifications use browser Notification API (may require permission)
+* Works best on Chrome / Edge
+* No backend — uses mock data
+
+---
+
+## 👨‍💻 Author
+
+Mandela
