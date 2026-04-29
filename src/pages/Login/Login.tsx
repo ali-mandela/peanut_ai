@@ -30,6 +30,20 @@ const handleLogin = async () => {
     setLoading(false)
   }
 }
+const handleLoginWithValues = async (email: string, password: string) => {
+  try {
+    setLoading(true)
+    setError('')
+
+    await signInWithEmailAndPassword(auth, email, password)
+    await requestPermission()
+    navigate('/dashboard')
+  } catch {
+    setError('Demo login failed')
+  } finally {
+    setLoading(false)
+  }
+}
 
   return ( 
   <div className="min-h-screen bg-surface flex items-center justify-center px-4">
@@ -44,6 +58,7 @@ const handleLogin = async () => {
           Sign in to your account
         </p>
       </div>
+      
 
       {/* Error */}
       {error && (
@@ -91,6 +106,23 @@ const handleLogin = async () => {
       >
         {loading ? 'Signing in...' : 'Sign In'}
       </button>
+
+   <button
+  onClick={() => {
+    const demoEmail = 'frontenddev@raga.ai'
+    const demoPassword = 'frontenddev@raga.ai'
+
+    // fill fields (so user sees them)
+    setEmail(demoEmail)
+    setPassword(demoPassword)
+
+    // trigger login with correct values
+    handleLoginWithValues(demoEmail, demoPassword)
+  }}
+  className="w-full mt-2 bg-surface border border-border text-text-primary text-sm py-2 rounded-md hover:bg-surface-elevated transition"
+>
+  Quick Demo Login
+</button>
 
       {/* Footer */}
       <p className="text-center text-xs text-text-secondary mt-5">
