@@ -95,6 +95,12 @@ npm run dev
 
 ---
 
+
+### Demo Images 
+
+<img width="1892" height="937" alt="image" src="https://github.com/user-attachments/assets/939e1790-0b36-4675-8f37-8b86f9e90c2c" />
+
+
 ## 👨‍💻 Author
 
-Mandela
+Muhammad Ali
